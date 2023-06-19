@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
-using TWISIO.Identity.API.Attributes;
+using TWISIO.Identity.API.Common.Attributes;
 using TWISIO.Identity.API.DTOs.UserDTOs;
 using TWISIO.Identity.API.DTOs.UserDTOs.ResponseDTOs;
 using TWISIO.Identity.API.Entities.Enums;
