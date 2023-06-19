@@ -30,7 +30,7 @@ var emailSenderOptions = new EmailSenderOptions
 {
     Name = builder.Configuration["SMTP:Name"],
     Username = builder.Configuration["SMTP:Username"],
-    Password = builder.Configuration["STMP:Password"],
+    Password = builder.Configuration["SMTP:Password"],
     Port = Convert.ToInt32(builder.Configuration["SMTP:Port"]),
     Host = builder.Configuration["SMTP:Host"]
 };
