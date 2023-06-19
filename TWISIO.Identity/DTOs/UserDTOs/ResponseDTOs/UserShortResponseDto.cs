@@ -1,4 +1,4 @@
-﻿namespace TWISIO.Identity.Application.DTOs.UserDTOs.ResponseDTOs
+﻿namespace TWISIO.Identity.API.DTOs.UserDTOs.ResponseDTOs
 {
     /// <summary>
     /// DTO, возвращаемое из метода получения пользователя

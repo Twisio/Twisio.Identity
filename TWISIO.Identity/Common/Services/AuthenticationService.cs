@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using TWISIO.Identity.Application.Common.Options;
-using TWISIO.Identity.Application.DTOs;
+using TWISIO.Identity.API.Common.Options;
+using TWISIO.Identity.API.DTOs;
 
-namespace TWISIO.Identity.API.Services
+namespace TWISIO.Identity.API.Common.Services
 {
     public static class AuthenticationService
     {

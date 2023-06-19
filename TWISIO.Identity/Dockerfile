@@ -2,8 +2,13 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
+EXPOSE 7266
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+
+COPY ["TWISIO.Identity/server.cert", "/etc/ssl/certs/server.cert"]
+COPY ["TWISIO.Identity/server.key", "/etc/ssl/private/server.key"]
+
 WORKDIR /src
 COPY ["TWISIO.Identity/TWISIO.Identity.API.csproj", "TWISIO.Identity/"]
 COPY ["TWISIO.Identity.Persistence/TWISIO.Identity.Persistence.csproj", "TWISIO.Identity.Persistence/"]
@@ -11,6 +16,7 @@ COPY ["TWISIO.Identity.Application/TWISIO.Identity.Application.csproj", "TWISIO.
 COPY ["TWISIO.Identity.Domain/TWISIO.Identity.Domain.csproj", "TWISIO.Identity.Domain/"]
 RUN dotnet restore "TWISIO.Identity/TWISIO.Identity.API.csproj"
 COPY . .
+
 WORKDIR "/src/TWISIO.Identity"
 RUN dotnet build "TWISIO.Identity.API.csproj" -c Release -o /app/build
 

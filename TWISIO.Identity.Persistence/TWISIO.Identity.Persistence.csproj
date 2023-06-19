@@ -18,8 +18,4 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\TWISIO.Identity.Application\TWISIO.Identity.Application.csproj" />
-  </ItemGroup>
-
 </Project>

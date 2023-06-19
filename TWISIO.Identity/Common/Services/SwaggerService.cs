@@ -1,7 +1,7 @@
 ﻿using Microsoft.OpenApi.Models;
 using Unchase.Swashbuckle.AspNetCore.Extensions.Extensions;
 
-namespace TWISIO.Identity.API.Services
+namespace TWISIO.Identity.API.Common.Services
 {
     public static class SwaggerService
     {

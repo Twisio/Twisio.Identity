@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using TWISIO.Identity.Domain.Enums;
+using TWISIO.Identity.API.Entities.Enums;
 
-namespace TWISIO.Identity.API.Attributes
+namespace TWISIO.Identity.API.Common.Attributes
 {
     public class RoleValidateAttribute : Attribute, IActionFilter
     {

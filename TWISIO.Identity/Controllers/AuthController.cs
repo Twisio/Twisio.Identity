@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using TWISIO.Identity.API.DTOs.AuthDTOs;
+using TWISIO.Identity.API.DTOs.AuthDTOs.ResponseDTOs;
+using TWISIO.Identity.API.Interfaces.Repositories;
 using TWISIO.Identity.API.Models;
-using TWISIO.Identity.Application.DTOs.AuthDTOs;
-using TWISIO.Identity.Application.DTOs.AuthDTOs.ResponseDTOs;
-using TWISIO.Identity.Application.Interfaces.Repositories;
 
 namespace TWISIO.Identity.API.Controllers
 {

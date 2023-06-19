@@ -3,10 +3,10 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Xml;
+using TWISIO.Identity.API.Common.Exceptions;
+using TWISIO.Identity.API.Entities.Enums;
+using TWISIO.Identity.API.Interfaces.Repositories;
 using TWISIO.Identity.API.Models;
-using TWISIO.Identity.Application.Common.Exceptions;
-using TWISIO.Identity.Application.Interfaces.Repositories;
-using TWISIO.Identity.Domain.Enums;
 
 namespace TWISIO.Identity.API.Middlewares.ExceptionMiddleware
 {

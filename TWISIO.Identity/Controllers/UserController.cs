@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using TWISIO.Identity.API.Attributes;
+using TWISIO.Identity.API.DTOs.UserDTOs;
+using TWISIO.Identity.API.DTOs.UserDTOs.ResponseDTOs;
+using TWISIO.Identity.API.Entities.Enums;
+using TWISIO.Identity.API.Interfaces.Repositories;
 using TWISIO.Identity.API.Models;
-using TWISIO.Identity.Application.DTOs.UserDTOs;
-using TWISIO.Identity.Application.DTOs.UserDTOs.ResponseDTOs;
-using TWISIO.Identity.Application.Interfaces.Repositories;
-using TWISIO.Identity.Domain.Enums;
 
 namespace TWISIO.Identity.API.Controllers
 {
@@ -70,7 +70,7 @@ namespace TWISIO.Identity.API.Controllers
         /// <response code="404">Пользователь не найден</response>
         /// <response code="500">Внутренняя ошибка сервера</response>
         [HttpGet("details_short")]
-        [SwaggerResponse(statusCode: StatusCodes.Status200OK, type: typeof(UserResponseDto))]
+        [SwaggerResponse(statusCode: StatusCodes.Status200OK, type: typeof(UserShortResponseDto))]
         [SwaggerResponse(statusCode: StatusCodes.Status404NotFound, type: typeof(ErrorModel))]
         [SwaggerResponse(statusCode: StatusCodes.Status500InternalServerError, type: typeof(ErrorModel))]
         public async Task<IActionResult> GetShortById([FromQuery] GetUserByIdDto dto)

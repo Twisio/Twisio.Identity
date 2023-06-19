@@ -12,7 +12,7 @@ services:
             context: .
             dockerfile: TWISIO.Identity/Dockerfile
         ports:
-            - "80:80"
+            - "7266:80"
         networks:
             - api-network
         depends_on:
@@ -20,16 +20,16 @@ services:
         volumes:
             - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
         environment:
-            JWT:SecretKey: $JWT:SecretKey
-            JWT:Issuer: $JWT:Issuer
-            JWT:Audience: $JWT:Audience
+            JWT:SecretKey: $JWT_SecretKey
+            JWT:Issuer: $JWT_Issuer
+            JWT:Audience: $JWT_Audience
             ConnectionStrings:PostgreSQL: $ConnectionString
-            SMTP:Name: $SMTP:Name
-            SMTP:Username: $SMTP:Username
-            SMTP:Password: $SMTP:Password
-            SMTP:Port: $SMTP:Port
-            SMTP:Host: $SMTP:Host
-    
+            SMTP:Name: $SMTP_Name
+            SMTP:Username: $SMTP_Username
+            SMTP:Password: $SMTP_Password
+            SMTP:Port: $SMTP_Port
+            SMTP:Host: $SMTP_Host
+
     postgres_db:
         container_name: postgres
         image: postgres:latest
